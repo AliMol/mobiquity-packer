@@ -1,0 +1,159 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2023,
+    "sourceType": "module"
+  },
+  "rules": {
+    "camelcase": "off",
+    "comma-dangle": ["error", "never"],
+    "strict": ["error", "global"],
+    "comma-spacing": ["error", {
+      "before": false,
+      "after": true
+    }],
+    "arrow-spacing": ["error", {
+      "before": true,
+      "after": true
+    }],
+    "array-bracket-spacing": 1,
+    "consistent-return": "off",
+    "curly": "error",
+    "default-case": "error",
+    "eqeqeq": ["error", "always", {
+      "null": "ignore"
+    }],
+    "func-names": "off",
+    "guard-for-in": "error",
+    "indent": ["error", 2, {
+      "SwitchCase": 1
+    }],
+    "key-spacing": ["error", {
+      "beforeColon": false,
+      "afterColon": true
+    }],
+    "keyword-spacing": ["error", {
+      "before": true,
+      "after": true
+    }],
+    "max-len": "off",
+    "@typescript-eslint/brace-style": "error",
+    "new-cap": ["error"],
+    "no-tautology-expression": "off",
+    "no-bitwise": "off",
+    "no-caller": "error",
+    "no-console": "off",
+    "no-else-return": "off",
+    "no-empty-class": "off",
+    "no-multi-spaces": "error",
+    "no-multiple-empty-lines": ["error", {
+      "max": 5,
+      "maxBOF": 0
+    }],
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "no-spaced-func": "error",
+    "func-style": ["off", "declaration"],
+    "no-throw-literal": "error",
+    "no-trailing-spaces": "error",
+    "no-undef": "error",
+    "no-unneeded-ternary": "error",
+    "no-unreachable": "error",
+    "no-underscore-dangle": "off",
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "args": "none"
+    }],
+    "@typescript-eslint/no-redeclare": "error",
+    "no-redeclare": "off",
+    "id-length": ["off", { //should error later
+      "min": 3,
+      "exceptions": ["i", "a", "b", "_", "fs", "rp", "$", "db", "iv", "to", "qs", "io", "id", "bi", "S3", "s3", "ip", "h"],
+      "properties": "never"
+    }],
+    "no-const-assign": "error",
+    "object-shorthand": "error",
+    "no-shadowed-variable": "off", // should error later
+    "no-useless-rename": "error",
+    "require-await": "error",
+    "prefer-const": ["error", {
+      "destructuring": "all"
+
+    }],
+    "prefer-destructuring": ["error", {
+      "VariableDeclarator": {
+        "array": true,
+        "object": true
+      },
+      "AssignmentExpression": {
+        "array": true,
+        "object": false
+      }
+    }],
+    "eol-last": ["error", "never"],
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        "enums": false,
+        "functions": false
+      }
+    ],
+    "no-var": ["error"],
+    "no-dupe-keys": "error",
+    "object-curly-spacing": ["error", "always"],
+    "one-var": ["error", "never"],
+    "one-var-declaration-per-line": ["error", "always"],
+    "padded-blocks": "off",
+    "space-before-blocks": ["error", "always"],
+    "space-before-function-paren": ["error", "never"],
+    "space-infix-ops": "error",
+    "space-in-parens": ["error", "never"],
+    "spaced-comment": ["error", "always"],
+    "template-curly-spacing": ["error", "never"],
+    "no-whitespace-before-property": "error",
+    "quote-props": ["error", "as-needed"],
+    "quotes": ["error", "single"],
+    "semi": "error",
+    "no-extra-semi": "error",
+    "semi-spacing": "error",
+    "wrap-iife": ["error", "outside"],
+    "prefer-template": "error",
+    "no-self-compare": "error",
+    "import/no-unresolved": "off",
+    "node/no-unsupported-features/es-syntax": "off",
+    "node/no-missing-import": "off",
+    "you-dont-need-lodash-underscore/omit": "off",
+    "you-dont-need-lodash-underscore/get": "off",
+    "no-inner-declarations": "off",
+    "@typescript-eslint/type-annotation-spacing": "error"
+  },
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "globals": {
+    "CustomError": true,
+    "ValidationError": true,
+    "reportError": true,
+    "Promise": true,
+    "global": true,
+    "require": true,
+    "module": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "unicorn",
+    "typescript"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:you-dont-need-lodash-underscore/compatible"
+  ],
+  "overrides": [{
+    "files": ["*.test.ts"],
+    "env": {
+      "mocha": true
+    }
+  }]
+}
